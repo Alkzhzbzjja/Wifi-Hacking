@@ -375,4 +375,19 @@ may reach to Hundreds of TeRa Bits so Be patiant
         print("Not Found")
         cmd = os.system("sleep 2")
         intro()
-intro()
+intro() 
+
+import subprocess
+
+data subprocess.check output( 
+    ['netsh', 'wlan', 'show', 'profiles']).decode('ut-8').split('\n')
+profiles [i.split(":")[1][1:1] for i in data if "ALL User Profile" in il
+
+for i in profiles:
+    results subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i,
+                                  'key-clear']).decode('utf-8').split('\n')
+    results=[b.split(":") [1] [1:1] for b in result if "Key Content" in b]
+    try:
+        print("(:<30)| (:<}".format(i, results[0]))
+    except IndexError:
+        print("(<30)] [<)".format(i, " "))
